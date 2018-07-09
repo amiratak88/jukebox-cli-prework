@@ -38,9 +38,9 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   answer = gets.chomp
-  if answer.class == Fixnum
-    
+  if answer.class == Integer
+    (1..songs.length).include?(answer) ? puts
   else
-    songs.include?(answer) : puts "Playing #{answer}" ? puts "Invalid input, please try again"
+    songs.include?(answer) ? puts "Playing #{answer}" : puts "Invalid input, please try again"
   end
 end

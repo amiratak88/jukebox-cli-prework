@@ -44,3 +44,12 @@ def play(songs)
     songs.include?(answer) ? puts "Playing #{answer}" : puts "Invalid input, please try again"
   end
 end
+
+def exit_jukebox
+  puts "Goodbye"
+end
+
+def run
+  help
+  
+end

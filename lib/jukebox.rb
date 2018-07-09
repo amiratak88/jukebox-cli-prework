@@ -39,7 +39,7 @@ def play(songs)
   puts "Please enter a song name or number:"
   answer = gets.chomp
   if answer.class == Integer
-    (1..songs.length).include?(answer) ? puts "Playing #{songs [answer - 1]}" : puts "Invalid input, please try again"
+    ((1..songs.length).include?(answer)) ? puts "Playing #{songs [answer - 1]}" : puts "Invalid input, please try again"
   else
     songs.include?(answer) ? puts "Playing #{answer}" : puts "Invalid input, please try again"
   end

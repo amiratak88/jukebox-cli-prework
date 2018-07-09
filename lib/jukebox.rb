@@ -38,12 +38,17 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   answer = gets.chomp
-  if answer.to_i.class == Integer && answer.to_i != 0
-    (1..songs.length).include?(answer.to_i) ? puts "Playing #{songs[answer.to_i - 1]}" : puts "Invalid input, please try again"
+  if (1..songs.length).include?(answer.to_i) || songs.include?(answer)
+    if answer.to_i != 0
+      puts "Playing #{songs[answer.to_i - 1]}"
+    else
+      puts "Playing #{answer}"
+    end
   else
-    songs.include?(answer) ? puts "Playing #{answer}" : puts "Invalid input, please try again"
+    puts "Invalid input, please try again"
   end
 end
+
 
 def exit_jukebox
   puts "Goodbye"

@@ -35,6 +35,8 @@ def list(songs)
   end
 end
 
-def play
+def play(songs)
   puts "Please enter a song name or number:"
+  answer = gets.chomp
+  songs.include?(answer) : puts "Playing #{answer}" ? puts "" 
 end

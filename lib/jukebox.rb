@@ -51,5 +51,19 @@ end
 
 def run
   help
-  
+  puts "Please enter a command:"
+  answer = gets.chomp
+  while answer != "exit"
+    case answer
+      when "help"
+        help
+      when "list"
+        list(songs)
+      when "play"
+        play(songs)
+    end
+    puts "Please enter a command:"
+    answer = gets.chomp
+  end
+  exit_jukebox
 end
